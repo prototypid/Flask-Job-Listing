@@ -12,16 +12,23 @@
               object-fit: cover;
           }
       </style>
-
   </head>
   <body>
+    {% include'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://images.unsplash.com/photo-1690555575753-7aa27df96b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
     <div class="container">
         <h1 class="text-center mt-4 mb-4">MySite Careers</h1>
-        <img class="img-fluid" id="banner" src="https://images.unsplash.com/photo-1690555575753-7aa27df96b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
         <h2 class="text-center mt-4 mb-4">About US</h2>
-        <p class="lead">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+        <div class="row" style="margin-bottom: 16px">
+            <div class="col-md-6">
+                <p class="lead">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="static/people-meeting.jpg" style="height:320px;border-radius: 4px">
+            </div>
+        </div>
         <h2 class="text-center">Open Positions</h2>
         <div>
             {% for job in jobs %}
@@ -29,9 +36,10 @@
             {% endfor %}
         </div>
         <div class="text-center">
-            <button class="btn btn-primary btn-large">Contact Us</button>
+            <a href=" mailto:me@example.com?subject=Query%20about%20Job%20Openings&body=My%20Name%3A%20%3Cyou%20name%20here%3E%0D%0A " class="btn btn-primary btn-large">Contact Us</a>
                 <p class="mt-4">Copyright 2022, ME</p>
         </div>
     </div>
+    {% include'footer.html' %}
   </body>
 </html>
